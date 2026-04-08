@@ -19,6 +19,23 @@
         <img src="https://picsum.photos/400/300?6">
     </div>
 </div>
+<footer>
+  <p id="contador"></p>
+</footer>
 
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if (visitas) {
+  visitas = parseInt(visitas) + 1;
+} else {
+  visitas = 1;
+}
+
+localStorage.setItem("visitas", visitas);
+
+document.getElementById("contador").innerText =
+  "Visitas: " + visitas;
+</script>
 </body>
 </html>
