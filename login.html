@@ -25,6 +25,24 @@ async function fazerLogin() {
     if(data.success) window.location.href = "index.html";
     else alert("Usuário ou senha inválidos!");
 }
+    <footer>
+  <p id="contador"></p>
+</footer>
+
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if (visitas) {
+  visitas = parseInt(visitas) + 1;
+} else {
+  visitas = 1;
+}
+
+localStorage.setItem("visitas", visitas);
+
+document.getElementById("contador").innerText =
+  "Visitas: " + visitas;
+</script>
 </script>
 </body>
 </html>
