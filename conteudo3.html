@@ -46,6 +46,23 @@
         Evoluir o sistema com autenticação segura, cadastro de usuários e integração com APIs externas.
     </p>
 </div>
+<footer>
+  <p id="contador"></p>
+</footer>
 
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if (visitas) {
+  visitas = parseInt(visitas) + 1;
+} else {
+  visitas = 1;
+}
+
+localStorage.setItem("visitas", visitas);
+
+document.getElementById("contador").innerText =
+  "Visitas: " + visitas;
+</script>
 </body>
 </html>
