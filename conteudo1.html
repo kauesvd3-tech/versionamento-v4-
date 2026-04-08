@@ -18,6 +18,23 @@
         <iframe src="https://www.youtube.com/watch?v=Z7mnxUI4u00" allowfullscreen></iframe>
     </div>
 </div>
+<footer>
+  <p id="contador"></p>
+</footer>
 
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if (visitas) {
+  visitas = parseInt(visitas) + 1;
+} else {
+  visitas = 1;
+}
+
+localStorage.setItem("visitas", visitas);
+
+document.getElementById("contador").innerText =
+  "Visitas: " + visitas;
+</script>
 </body>
 </html>
